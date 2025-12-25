@@ -110,14 +110,14 @@ pulse_senior_ai_agent/
 ### How to Run
 
 ### 1. Activate Virtual Environment
-source venv/bin/activate
+``` source venv/bin/activate ```
 
 ### 2. Run the Full Pipeline
-python -m src.main
+``` python -m src.main ```
 
 ### 3. Output
 The final trend report will be generated at:
-output/trend_report_YYYY-MM-DD.csv
+``` output/trend_report_YYYY-MM-DD.csv ```
 
 ---
 
