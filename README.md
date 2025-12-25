@@ -136,49 +136,60 @@ output/trend_report_YYYY-MM-DD.csv
 | food quality issue        | 11         | 14         | 16         | 6          | 17         |
 
 ```
+---
 
 ### Deduplication Strategy (Key Challenge)
-To handle semantically similar but differently phrased complaints (e.g., “delivery guy was rude” vs “delivery partner behaved badly”):
+- To handle semantically similar but differently phrased complaints (e.g., “delivery guy was rude” vs “delivery partner behaved badly”):
 
-Sentence embeddings are used to compute semantic similarity
+- Sentence embeddings are used to compute semantic similarity
 
-Cosine similarity determines whether topics should be merged
+- Cosine similarity determines whether topics should be merged
 
-Canonical topics remain stable across time
+- Canonical topics remain stable across time
 
-Variant phrases are tracked internally in a topic registry
+- Variant phrases are tracked internally in a topic registry
 
-This approach ensures accurate trend analysis and prevents topic fragmentation.
+- This approach ensures accurate trend analysis and prevents topic fragmentation.
+
+---
 
 ### Mock vs Live Data
-Mock mode is used for deterministic demos and quota-free execution
+- Mock mode is used for deterministic demos and quota-free execution
 
-The architecture supports live LLM-based extraction with no structural changes
+- The architecture supports live LLM-based extraction with no structural changes
 
-Some trend similarity is expected with synthetic data and is documented
+- Some trend similarity is expected with synthetic data and is documented
+
+---
 
 ### Assumptions
-Reviews are available on a per-day basis
+- Reviews are available on a per-day basis
 
-Each review may contain multiple topic signals
+- Each review may contain multiple topic signals
 
-Topic frequency reflects count of mentions, not sentiment intensity
+- Topic frequency reflects count of mentions, not sentiment intensity
+
+---
 
 ### Limitations
-Mock data does not fully reflect real-world linguistic noise
+- Mock data does not fully reflect real-world linguistic noise
 
-No UI/dashboard (out of scope)
+- No UI/dashboard (out of scope)
 
-Ingestion is batch-based, not real-time
+- Ingestion is batch-based, not real-time
+
+---
 
 ### Why This Approach
-Aligns with real-world AI product analytics systems
+- Aligns with real-world AI product analytics systems
 
-Prioritizes accuracy and stability over heuristics
+- Prioritizes accuracy and stability over heuristics
 
-Explicitly solves the semantic deduplication problem highlighted in the assignment
+- Explicitly solves the semantic deduplication problem highlighted in the assignment
 
 Scales naturally to real app review data
+
+---
 
 ### Conclusion
 This project delivers a production-grade, agentic AI pipeline for extracting and analyzing trends from app reviews. The design emphasizes correctness, extensibility, and strict alignment with assignment requirements.
