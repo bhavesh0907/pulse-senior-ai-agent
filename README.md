@@ -187,7 +187,7 @@ The final trend report will be generated at:
 
 - Explicitly solves the semantic deduplication problem highlighted in the assignment
 
-Scales naturally to real app review data
+- Scales naturally to real app review data
 
 ---
 
