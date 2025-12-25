@@ -1,0 +1,23 @@
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# OS files
+.DS_Store
+
+# Environment variables
+.env
+
+# API keys
+*.key
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+

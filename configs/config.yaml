@@ -1,0 +1,5 @@
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.2
+  mode: mock   # options: mock | live
