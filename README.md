@@ -105,6 +105,8 @@ pulse_senior_ai_agent/
 ├── .gitignore
 └── README.md
 
+🔹 ` ```text ` is the **important part**  
+🔹 This guarantees **perfect alignment on GitHub**
 
 ---
 
