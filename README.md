@@ -76,32 +76,35 @@ Copy code
 
 ---
 
-### Folder Structure
+## Folder Structure
 
+```text
 pulse_senior_ai_agent/
 ├── src/
-│ ├── agents/
-│ │ ├── review_ingestion_agent.py
-│ │ ├── topic_extraction_agent.py
-│ │ ├── topic_dedup_agent.py
-│ │ └── topic_storage.py
-│ ├── core/
-│ │ ├── pipeline.py
-│ │ ├── trend_generator.py
-│ │ └── report_writer.py
-│ └── utils/
-│ ├── date_utils.py
-│ └── io_utils.py
+│   ├── agents/
+│   │   ├── review_ingestion_agent.py
+│   │   ├── topic_extraction_agent.py
+│   │   ├── topic_dedup_agent.py
+│   │   └── topic_storage.py
+│   ├── core/
+│   │   ├── pipeline.py
+│   │   ├── trend_generator.py
+│   │   └── report_writer.py
+│   ├── utils/
+│   │   ├── date_utils.py
+│   │   └── io_utils.py
+│   └── main.py
 ├── data/
-│ ├── raw_reviews/
-│ └── processed/
-│ └── topic_registry.json
+│   ├── raw_reviews/
+│   └── processed/
+│       └── topic_registry.json
 ├── output/
-│ └── trend_report_YYYY-MM-DD.csv
+│   └── trend_report_YYYY-MM-DD.csv
 ├── configs/
-│ └── config.yaml
-├── venv/
+│   └── config.yaml
+├── .gitignore
 └── README.md
+
 
 ---
 
@@ -117,16 +120,31 @@ python -m src.main
 The final trend report will be generated at:
 output/trend_report_YYYY-MM-DD.csv
 
-### Output Format
-                        2024-05-31	2024-06-01	2024-06-02	2024-06-03	2024-06-04	
-delivery issue	          20	       20	      28	       22	       11	
-late delivery	          20	       20	      28	       22	       11	
-delivery partner rude	  20	       20	      28	       22	       11	
-app crashing	          6	           6	      4	           3	       5	
-refund delayed	          7	           2	      4	           12	       6	
-maps not working	      4	           10	      4	           8	       7	
-instamart availability	  5	           8	      4	           3	       7	
-food quality issue	      11	       14	      16	       6	       17	
+
+GitHub does **not** auto-convert that into a table.
+
+You must use **Markdown table syntax** (`| |`).
+
+---
+
+## ✅ FIX — Proper Markdown Table (GitHub-rendered)
+
+### Replace your **“Output Format” section** with this:
+
+```markdown
+## Output Format
+
+| Topic                     | 2024-05-31 | 2024-06-01 | 2024-06-02 | 2024-06-03 | 2024-06-04 |
+|---------------------------|------------|------------|------------|------------|------------|
+| delivery issue            | 20         | 20         | 28         | 22         | 11         |
+| late delivery             | 20         | 20         | 28         | 22         | 11         |
+| delivery partner rude     | 20         | 20         | 28         | 22         | 11         |
+| app crashing              | 6          | 6          | 4          | 3          | 5          |
+| refund delayed            | 7          | 2          | 4          | 12         | 6          |
+| maps not working          | 4          | 10         | 4          | 8          | 7          |
+| instamart availability    | 5          | 8          | 4          | 3          | 7          |
+| food quality issue        | 11         | 14         | 16         | 6          | 17         |
+
 
 
 ### Deduplication Strategy (Key Challenge)
