@@ -105,12 +105,12 @@ pulse_senior_ai_agent/
 ├── .gitignore
 └── README.md
 
-🔹 ` ```text ` is the **important part**  
-🔹 This guarantees **perfect alignment on GitHub**
+
+'''
 
 ---
 
-## How to Run
+### How to Run
 
 ### 1. Activate Virtual Environment
 source venv/bin/activate
