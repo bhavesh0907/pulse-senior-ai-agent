@@ -75,7 +75,6 @@ Copy code
 - Outputs a CSV consumable by product and analytics teams
 
 ---
-
 ## Folder Structure
 
 ```text
@@ -105,9 +104,7 @@ pulse_senior_ai_agent/
 ├── .gitignore
 └── README.md
 
-
-'''
-
+```
 ---
 
 ### How to Run
@@ -122,19 +119,10 @@ python -m src.main
 The final trend report will be generated at:
 output/trend_report_YYYY-MM-DD.csv
 
-
-GitHub does **not** auto-convert that into a table.
-
-You must use **Markdown table syntax** (`| |`).
-
 ---
 
-## ✅ FIX — Proper Markdown Table (GitHub-rendered)
-
-### Replace your **“Output Format” section** with this:
-
-```markdown
 ## Output Format
+```markdown
 
 | Topic                     | 2024-05-31 | 2024-06-01 | 2024-06-02 | 2024-06-03 | 2024-06-04 |
 |---------------------------|------------|------------|------------|------------|------------|
@@ -147,11 +135,10 @@ You must use **Markdown table syntax** (`| |`).
 | instamart availability    | 5          | 8          | 4          | 3          | 7          |
 | food quality issue        | 11         | 14         | 16         | 6          | 17         |
 
-
+```
 
 ### Deduplication Strategy (Key Challenge)
-To handle semantically similar but differently phrased complaints (e.g.,
-“delivery guy was rude” vs “delivery partner behaved badly”):
+To handle semantically similar but differently phrased complaints (e.g., “delivery guy was rude” vs “delivery partner behaved badly”):
 
 Sentence embeddings are used to compute semantic similarity
 
